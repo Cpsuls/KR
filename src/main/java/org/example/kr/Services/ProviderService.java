@@ -4,6 +4,8 @@ import org.example.kr.Models.Provider;
 import org.example.kr.Repositotries.ProviderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 
@@ -12,15 +14,15 @@ public class ProviderService {
     @Autowired
     private ProviderRepository providerRepository;
 
-    public List<Provider> getAllProviders() {
+    public Flux<Provider> getAllProviders() {
         return providerRepository.findAll();
     }
 
-    public Provider getProviderById(Long id) {
-        return providerRepository.findById(id).orElse(null);
+    public Mono<Provider> getProviderById(Long id) {
+        return providerRepository.findById(id);
     }
 
-    public Provider saveProvider(Provider provider) {
+    public Mono<Provider> saveProvider(Provider provider) {
         return providerRepository.save(provider);
     }
 
@@ -28,9 +30,6 @@ public class ProviderService {
         providerRepository.deleteById(id);
     }
 
-    public List<Provider> findByName(String name) {
-        return providerRepository.findByNameContainingIgnoreCase(name);
-    }
     }
 
 

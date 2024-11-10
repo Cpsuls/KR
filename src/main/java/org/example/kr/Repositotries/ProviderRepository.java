@@ -1,20 +1,13 @@
 package org.example.kr.Repositotries;
 
 import org.example.kr.Models.Provider;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
-import java.util.List;
-import java.util.Optional;
+public interface ProviderRepository extends ReactiveCrudRepository<Provider,Long> {
+    Flux<Provider> findAll();
 
-public interface ProviderRepository extends PagingAndSortingRepository<Provider,Long> {
-    List<Provider> findAll();
+    Mono<Provider> findById(Long id);
 
-    Optional<Provider> findById(Long id);
-
-    Provider save(Provider provider);
-
-    void deleteById(Long id);
-
-    List<Provider> findByNameContainingIgnoreCase(String name);
 }
