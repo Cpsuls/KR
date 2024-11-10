@@ -37,6 +37,7 @@ public class KrApplication implements CommandLineRunner, ApplicationListener<Con
     public void run(String... args) throws Exception {
         Provider provider1 = new Provider();
         provider1.setName("KFC");
+        provider1.setDetaiils("Big Company");
         provider1 = providerService.saveProvider(provider1);
         createdProviders.add(provider1);
 //        Provider provider2 = new Provider();
@@ -48,6 +49,7 @@ public class KrApplication implements CommandLineRunner, ApplicationListener<Con
         beef.setDescription("Tasty beef");
         beef.setPrice(BigDecimal.valueOf(190.0));
         beef.setProvider(provider1);
+        beef.setAddress("ул.Ленина 54");
         beef = productService.saveProduct(beef);
 //        createdProducts.add(beef);
 //        Product cucumber = new Product();
