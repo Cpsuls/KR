@@ -1,0 +1,91 @@
+/* ProductList.css */
+
+body {
+    background-color: papayawhip; /* Светлый фон для всего приложения */
+}
+
+h2 {
+    text-align: center; /* Центрируем заголовок */
+    color: #343a40; /* Цвет заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.table {
+    margin: auto; /* Центрируем таблицу */
+    width: 80%; /* Устанавливаем ширину таблицы */
+    background-color: #ffffff; /* Белый фон для таблицы */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.table th {
+    background-color: #007bff; /* Цвет фона для заголовков */
+    color: white; /* Цвет текста заголовков */
+}
+
+.table td {
+    color: #495057; /* Цвет текста ячеек */
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; /* Цвет фона строки при наведении */
+}
+
+.form-inline {
+    display: flex; /* Используем flexbox для формы */
+    justify-content: center; /* Центрируем форму */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.form-inline input {
+    margin-right: 10px; /* Отступ между полем ввода и кнопкой */
+}
+
+.btn {
+    background-color: #007bff; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+.input-group {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+button {
+    transition: background-color 0.3s;
+}
+.search-bar {
+    width: 100%; /* Полная ширина */
+    max-width: 100%; /* Убираем максимальную ширину */
+    margin: 0 auto; /* Центрирование */
+    border-radius: 24px; /* Скругление углов */
+
+}
+
+.search-bar .form-control {
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 24px; /* Скругление углов */
+}
+
+.search-bar .form-control:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+    border-color: #007bff; /* Цвет рамки при фокусе */
+}
+
+.search-bar .input-group-text {
+    background-color: #f8f9fa; /* Цвет фона для иконки */
+    border: none; /* Убираем рамку */
+    border-top-left-radius: 24px; /* Скругление углов */
+    border-bottom-left-radius: 24px; /* Скругление углов */
+}
